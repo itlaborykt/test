@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2 задание</title>
+	<style>
+		/* Див с картинкой фоном 'game over', который скрыт. */
+		.box {
+			background-image: url(1.jpg);
+			background-size: 100% 100%;
+			width: 200px;
+			height: 200px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>hp: <span class="hp">5</span></h1>
+	<button class="btn">Нажми</button>
+	<div class="box">
+	</div>
+
+	<script type="text/javascript">
+		// создай переменную hp, которая содержит число 0.
+		// выведи в тег span значение переменной hp.
+		// при клике на кнопку, hp уменьшается на - 1 и выводится на экран. если hp меньше или равно 0 то, скрыть кнопку и отобразить див с картинкой фоном (game over).
+				let count = 5;
+		document.querySelector(".btn").onclick=function() {
+			count = count - 1;
+			document.querySelector(".hp").innerHTML = count;
+				if(count==0) {
+				document.querySelector(".btn").style.display = "none";	
+				document.querySelector(".box").style.display = "block";	
+				}
+		}
+	</script>
+</body>
+</html>
